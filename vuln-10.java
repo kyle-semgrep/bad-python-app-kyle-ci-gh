@@ -43,7 +43,25 @@ public class App
 abstract class App2
 {
 // ruleid: java-jwt-hardcoded-secret
-    static String secret = "secret";
+    abstract class App2
+    {
+        public void bad2() {
+            try {
+                // Retrieve the secret key from an environment variable
+                String secretKey = System.getenv("SECRET_KEY");
+                if (secretKey == null) {
+                    throw new IllegalArgumentException("SECRET_KEY environment variable not set");
+                }
+
+                Algorithm algorithm = Algorithm.HMAC256(secretKey);
+                String token = JWT.create()
+                    .withIssuer("auth0")
+                    .sign(algorithm);
+            } catch (JWTCreationException exception){
+                //Invalid Signing configuration / Couldn't convert Claims.
+            }
+        }
+    }
 
     public void bad2() {
         try {
