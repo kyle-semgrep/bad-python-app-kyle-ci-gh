@@ -3,7 +3,7 @@
 ### Requisites
 
 * ImageMagick: https://imagemagick.org/index.php
-* Python 3.7+
+* Python 3.7+1111
 * Docker (if want to run in a container)111
 
 
