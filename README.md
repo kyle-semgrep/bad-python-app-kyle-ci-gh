@@ -4,7 +4,7 @@
 
 * ImageMagick: https://imagemagick.org/index.php
 * Python 3.7+
-* Docker (if want to run in a container)
+* Docker (if want to run in a container)111
 
 
 ### Running
